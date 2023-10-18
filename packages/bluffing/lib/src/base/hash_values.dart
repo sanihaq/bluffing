@@ -10,7 +10,9 @@ const _HashEnd _hashEnd = _HashEnd();
 int hashList(Iterable<Object>? arguments) {
   int result = 0;
   if (arguments != null) {
-    for (Object argument in arguments) result = _Jenkins.combine(result, argument);
+    for (Object argument in arguments) {
+      result = _Jenkins.combine(result, argument);
+    }
   }
   return _Jenkins.finish(result);
 }

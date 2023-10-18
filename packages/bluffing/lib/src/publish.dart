@@ -53,7 +53,7 @@ Future<void> publish(
       final localAssetDestination = Directory(path.join(localeDirectory.path, 'assets'));
       await localAssetDestination.create(recursive: true);
 
-      final items = await assets.list(recursive: true);
+      final items = assets.list(recursive: true);
       for (var item in await items.toList()) {
         if (item is File) {
           final relativePath = item.path.replaceFirst(

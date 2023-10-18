@@ -721,8 +721,9 @@ class Rect {
   /// an [AnimationController].
   static Rect? lerp(Rect? a, Rect? b, double t) {
     if (a == null && b == null) return null;
-    if (a == null && b != null)
+    if (a == null && b != null) {
       return Rect.fromLTRB(b.left * t, b.top * t, b.right * t, b.bottom * t);
+    }
     if (b == null && a != null) {
       final double k = 1.0 - t;
       return Rect.fromLTRB(a.left * k, a.top * k, a.right * k, a.bottom * k);
@@ -1101,8 +1102,9 @@ class RRect {
   /// using this method, prefer to reuse existing [RRect]s rather than
   /// recreating the object each time.
   bool contains(Offset point) {
-    if (point.dx! < left || point.dx! >= right || point.dy! < top || point.dy! >= bottom)
+    if (point.dx! < left || point.dx! >= right || point.dy! < top || point.dy! >= bottom) {
       return false; // outside bounding box
+    }
 
     final RRect scaled = scaleRadii();
 
@@ -1239,8 +1241,9 @@ class RRect {
         '${right.toStringAsFixed(1)}, '
         '${bottom.toStringAsFixed(1)}';
     if (tlRadius == trRadius && trRadius == brRadius && brRadius == blRadius) {
-      if (tlRadius.x == tlRadius.y)
+      if (tlRadius.x == tlRadius.y) {
         return 'RRect.fromLTRBR($rect, ${tlRadius.x!.toStringAsFixed(1)})';
+      }
       return 'RRect.fromLTRBXY($rect, ${tlRadius.x!.toStringAsFixed(1)}, ${tlRadius.y!.toStringAsFixed(1)})';
     }
     return 'RRect.fromLTRBAndCorners('

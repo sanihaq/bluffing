@@ -34,7 +34,6 @@ bool? axisDirectionIsReversed(AxisDirection axisDirection) {
     case AxisDirection.right:
       return false;
   }
-  return null;
 }
 
 /// Returns the [Axis] that contains the given [AxisDirection].
@@ -51,7 +50,6 @@ Axis? axisDirectionToAxis(AxisDirection axisDirection) {
     case AxisDirection.right:
       return Axis.horizontal;
   }
-  return null;
 }
 
 /// Returns the opposite of the given [Axis].
@@ -104,7 +102,6 @@ AxisDirection? textDirectionToAxisDirection(TextDirection textDirection) {
     case TextDirection.ltr:
       return AxisDirection.right;
   }
-  return null;
 }
 
 /// The two cardinal directions in two dimensions.

@@ -2,6 +2,8 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+// ignore_for_file: dead_code
+
 import 'package:bluffing/src/base/text.dart';
 import 'package:meta/meta.dart';
 
@@ -729,8 +731,9 @@ abstract class EdgeInsetsGeometry {
   String toString() {
     if (_start == 0.0 && _end == 0.0) {
       if (_left == 0.0 && _right == 0.0 && _top == 0.0 && _bottom == 0.0) return 'EdgeInsets.zero';
-      if (_left == _right && _right == _top && _top == _bottom)
+      if (_left == _right && _right == _top && _top == _bottom) {
         return 'EdgeInsets.all(${_left!.toStringAsFixed(1)})';
+      }
       return 'EdgeInsets(${_left!.toStringAsFixed(1)}, '
           '${_top!.toStringAsFixed(1)}, '
           '${_right!.toStringAsFixed(1)}, '
@@ -778,8 +781,9 @@ abstract class EdgeInsetsGeometry {
     if (a == null) return b! * t;
     if (b == null) return a * (1.0 - t);
     if (a is EdgeInsets && b is EdgeInsets) return EdgeInsets.lerp(a, b, t);
-    if (a is EdgeInsetsDirectional && b is EdgeInsetsDirectional)
+    if (a is EdgeInsetsDirectional && b is EdgeInsetsDirectional) {
       return EdgeInsetsDirectional.lerp(a, b, t);
+    }
     return _MixedEdgeInsets.fromLRSETB(
       lerpDouble(a._left, b._left, t),
       lerpDouble(a._right, b._right, t),

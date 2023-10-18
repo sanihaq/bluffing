@@ -403,6 +403,7 @@ enum BoxWidthStyle {
 /// ```
 /// {@end-tool}
 class FontFeature {
+  // ignore: unused_field
   static const int _kEncodedSize = 8;
 
   /// The tag that identifies the effect of this feature.  Must consist of 4
@@ -1261,7 +1262,9 @@ class TextDecoration {
   /// Creates a decoration that paints the union of all the given decorations.
   factory TextDecoration.combine(List<TextDecoration> decorations) {
     int mask = 0;
-    for (TextDecoration decoration in decorations) mask |= decoration._mask;
+    for (TextDecoration decoration in decorations) {
+      mask |= decoration._mask;
+    }
     return TextDecoration._(mask);
   }
 
