@@ -2,7 +2,7 @@
 
 Bluffing is a static site generator(SSG) written in dart that is inspired by Flutter widgets.
 
-*Bluffing was ported from [bluff](https://github.com/aloisdeniel/bluff). Here are some direct quote from them.*
+*Bluffing was ported from [bluff](https://github.com/aloisdeniel/bluff). Here are some direct quotes from them.*
 
  > Why ?
 

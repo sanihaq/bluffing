@@ -1,10 +1,23 @@
 name: bluffing
-description: A SEO friendly SSG.
+description: A SEO friendly SSG(Static Site Generator).Includes markdown and tailwind support.
+homepage: https://github.com/sanihaq/bluffing
+repository: https://github.com/sanihaq/bluffing/tree/main/packages/bluffing
+
 version: 0.1.0
-homepage: https://github.com/aloisdeniel/bluffing
 
 environment:
-  sdk: ">=3.0.0 <4.0.0"
+  sdk: ^3.0.0
+
+topics:
+  - bluff
+  - seo
+  - ssg
+  - static site
+  - website
+  - web
+  - html
+  - jaspr
+  - dsg
 
 dependencies:
   meta: ^1.11.0
