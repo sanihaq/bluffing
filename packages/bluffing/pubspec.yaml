@@ -1,0 +1,16 @@
+name: bluffing
+description: A SEO friendly SSG.
+version: 0.1.0
+homepage: https://github.com/aloisdeniel/bluffing
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  meta: ^1.11.0
+  universal_html: ^2.2.4
+  path: ^1.8.3
+
+dev_dependencies:
+  lints: ^2.1.1
+  test: ^1.24.8
